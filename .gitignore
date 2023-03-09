@@ -160,4 +160,4 @@ cython_debug/
 .idea/
 
 # DB files
-*.db_app
+*.db_app*
