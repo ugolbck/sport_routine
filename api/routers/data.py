@@ -1,6 +1,6 @@
 """Routes for manipulating data in the DB"""
 
-from api.models import Entry
+from api.schemas import Entry
 from fastapi import APIRouter
 
 router = APIRouter(prefix="/data")
