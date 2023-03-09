@@ -6,8 +6,9 @@ authors = ["ugo_lbck <ugo@seo-quantum.com>"]
 
 [tool.poetry.dependencies]
 python = "~3.11"
-fastapi = "*"
+fastapi = {extras = ["all"], version = "*"}
 uvicorn = "^0.20.0"
+sqlalchemy = "^2.0.5.post1"
 
 [tool.poetry.dev-dependencies]
 
