@@ -4,6 +4,8 @@ from sqlalchemy.orm import Session
 from api.db_app import Training, Event
 from api.schemas import TrainingSchemaCreate, EventSchemaCreate
 
+import logging
+
 # Get functions
 
 
@@ -26,6 +28,7 @@ def get_events(db: Session, skip: int = 0, limit: int = 100):
 # Create functions
 
 def create_training(db: Session, training: TrainingSchemaCreate):
+    logging.info(training)
     db_item = Training(**training.dict())
     db.add(db_item)
     db.commit()

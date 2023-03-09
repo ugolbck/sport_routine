@@ -1,7 +1,7 @@
 """SQLAlchemy schemas"""
 
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, DateTime
 
 Base = declarative_base()
 
@@ -11,6 +11,7 @@ class Training(Base):
 
     id = Column(Integer, primary_key=True, index=True, unique=True)
     discipline = Column(String(30), index=True)
+    date = Column(DateTime)
     precisions = Column(String)
     weather = Column(String)
     duration = Column(Integer)
@@ -23,6 +24,7 @@ class Event(Base):
 
     id = Column(Integer, primary_key=True, index=True, unique=True)
     discipline = Column(String(30), index=True)
+    date = Column(DateTime)
     precisions = Column(String)
     weather = Column(String)
     duration = Column(Integer)

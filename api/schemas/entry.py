@@ -32,8 +32,8 @@ class EventSchema(EntryBase):
     """Represents an event. Will be returned with an id from DB."""
     id: int
     objective: str | None
-    scratch_position = int | None
-    category_position = int | None
+    scratch_position: int | None
+    category_position: int | None
 
     class Config:
         orm_mode = True

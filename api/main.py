@@ -1,9 +1,13 @@
 from fastapi import FastAPI
-from api.routers import data, users
+from api.routers import entries, users
+from api.db_app.database import ENGINE
+from api.db_app.models import Base
 
 
-app = FastAPI(title="Sport memories")
-app.include_router(data.router)
+Base.metadata.create_all(bind=ENGINE)
+
+app = FastAPI(title="Sport data")
+app.include_router(entries.router)
 app.include_router(users.router)
 
 
