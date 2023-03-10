@@ -1,0 +1,11 @@
+version: '3.11.2'
+
+services:
+  server:
+    image: api
+    build: .
+    environment:
+      DOCKER_BUILDKIT: 0
+      COMPOSE_DOCKER_CLI_BUILD: 0
+    ports:
+      - 80:8080
