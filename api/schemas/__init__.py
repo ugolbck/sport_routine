@@ -1,1 +1,1 @@
-from .entry import TrainingSchema, TrainingSchemaCreate, EventSchema, EventSchemaCreate
+from .session import TrainingSchema, TrainingSchemaCreate, EventSchema, EventSchemaCreate

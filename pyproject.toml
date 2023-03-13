@@ -9,6 +9,7 @@ python = "~3.11"
 fastapi = {extras = ["all"], version = "*"}
 uvicorn = "^0.20.0"
 sqlalchemy = "^2.0.5.post1"
+pymongo = "^4.3.3"
 
 [tool.poetry.dev-dependencies]
 
